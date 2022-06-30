@@ -1,0 +1,26 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>basicServlet</servlet-name>
+    <servlet-class>com.platzi.app.controller.ApplicationController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>basicServlet</servlet-name>
+    <url-pattern>/serv1</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>BeerSelector</servlet-name>
+    <servlet-class>com.platzi.app.controller.BeerSelectorController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BeerSelector</servlet-name>
+    <url-pattern>/SelectBeer.do</url-pattern>
+  </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,19 @@
+@startuml
+!theme reddress-lightred
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+title Client - Server - Architecture Overview
+
+LAYOUT_WITH_LEGEND()
+
+Person(user, "User")
+Container(browser, "Browser", "Client")
+System_Boundary(site, "Servlet container"){
+    Container(webapp, "Drink Advisor App", "Java", "Web app")
+}
+Rel(user, browser, "Action")
+Rel(browser, webapp, "Request")
+Rel(webapp, browser, "Resource")
+
+footer drawn with PlantUML v. %version() and C4-PlantUML v. C4Version()
+@enduml
