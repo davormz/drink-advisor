@@ -1,9 +1,10 @@
 package com.platzi.app.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,16 +16,12 @@ public class BeerSelectorController extends HttpServlet {
 
     private BeerSelectorService beerSelectorService = new SimpleBeerExpert();
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
-        response.setContentType("text/html");
-        PrintWriter writer = response.getWriter();
-        writer.println("Beer selection advice: ");
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
         String beerColor = request.getParameter("color");
         List<String> brands = beerSelectorService.getBrands(beerColor);
-        for(String brand : brands){
-            writer.println("<br>Try: <strong>" + brand + "</strong>");
-        }
-
+        request.setAttribute("brands", brands);
+        RequestDispatcher view = request.getRequestDispatcher("pages/results.jsp");
+        view.forward(request, response);
     }
     
 }
