@@ -1,0 +1,20 @@
+@startuml
+    title Servlet's life cycle overview
+
+    participant Container as container
+    participant ServletClass as servletClass
+    participant ServletInstance as servletInstance
+
+    container -> servletClass : Load class
+    note right: This happens when the container starts up.
+
+    container -> servletInstance : Instantiate servlet
+    container -> servletInstance : init()
+    container -> servletInstance : service()
+    servletInstance -> servletInstance : Handle requests
+    note right: doGet() or doPost() \n or any other HTTP request.
+    
+    container -> servletInstance : destroy()
+
+    footer drawn with PlantUML v. %version() and C4-PlantUML v. C4Version()
+@enduml

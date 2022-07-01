@@ -8,7 +8,7 @@ Proxy:
 ```
 http://www.plantuml.com/plantuml/proxy
 ```
-and pass the raw reference to teh proxy in the image markdown notation.
+and pass the raw reference to the proxy in the image markdown notation.
 ```
 ![system overview](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/davormz/drink-advisor/main/docs/diagrams/client-server.puml)
 ```

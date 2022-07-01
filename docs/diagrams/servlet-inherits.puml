@@ -1,0 +1,23 @@
+@startuml
+    title Servlet lifecycle inheritance.
+
+    interface Servlet{
+        service()
+        init(ServletConfig) 
+        destroy()
+        getServletConfig()
+        getServletInfo()
+    }
+
+    abstract class GenericServlet
+    
+    class HttpServlet
+
+    class DrinkSelectorServlet
+
+    Servlet <|.. GenericServlet
+    GenericServlet <|-- HttpServlet
+    HttpServlet <|-- DrinkSelectorServlet
+
+    footer drawn with PlantUML v. %version() and C4-PlantUML v. C4Version()
+@enduml
