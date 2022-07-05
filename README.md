@@ -1,5 +1,5 @@
 # Drink advisor App with java, Servlets and JSP.
-This is the courseware for the Servlet and JSP course.
+This is the courseware for Java Web Programing; Servlets and JSPs course.
 
 ## System context.
 The following diagram explains the context of the project.
@@ -11,7 +11,16 @@ The following diagram explains the context of the project.
 * [JDK 8 or up](https://www.oracle.com/java/technologies/downloads/)
 * [Maven](https://maven.apache.org/download.cgi)
 
-## Installing dependencies
+#### Install JDK on windows.
+Follow the steps from the [official site](https://docs.oracle.com/javase/10/install/installation-jdk-and-jre-microsoft-windows-platforms.htm).
+
+#### Install JDK on Linux.
+Follow the instructions from the [official site](https://docs.oracle.com/javase/10/install/installation-jdk-and-jre-linux-platforms.htm).
+
+#### Hos to install Apache Maven.
+Follow the instructions from the [official site](https://maven.apache.org/install.html).
+
+### Installing project dependencies
 After cloning the project it is necessary to run the following command to get all the dependencies.
 ```
 mvn install
@@ -24,7 +33,7 @@ mvn jetty:run
 ```
 
 ### Create a project directly from the archetype - From scratch
-To start the project completely from scratch execute the maven archetype command:
+This project was created using a maven archetype. To start the project completely from scratch execute the maven archetype command:
 ```
 mvn archetype:generate "-DarchetypeGroupId=org.apache.maven.archetypes" "-DarchetypeArtifactId=maven-archetype-webapp" "-DarchetypeVersion=1.4"
 ```
