@@ -17,20 +17,21 @@ Follow the steps from the [official site](https://docs.oracle.com/javase/10/inst
 #### Install JDK on Linux.
 Follow the instructions from the [official site](https://docs.oracle.com/javase/10/install/installation-jdk-and-jre-linux-platforms.htm).
 
-#### Hos to install Apache Maven.
+#### How to install Apache Maven.
 Follow the instructions from the [official site](https://maven.apache.org/install.html).
 
 ### Installing project dependencies
-After cloning the project it is necessary to run the following command to get all the dependencies.
+After cloning the project it is necessary to run the following command to get all the dependencies required for the project.
 ```
 mvn install
 ```
 
 ### Run it on local
-This project uses the jetty plugin to test it on local:
+Run the following command, to start the jetty server on local.
 ```
 mvn jetty:run
 ```
+Then open your browser and visit http:/localhost:9090 and you should see the web application index page.
 
 ### Create a project directly from the archetype - From scratch
 This project was created using a maven archetype. To start the project completely from scratch execute the maven archetype command:

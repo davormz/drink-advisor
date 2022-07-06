@@ -13,15 +13,20 @@
 <body>
     <jsp:include page="header.jsp" />
     <section class="content">
-        <h2>Recomendations</h2>
-
-        <!-- This is a JSP Scriptlet -->
-        <%
-            List<String> brands = (List) request.getAttribute("brands");
-            for(String brand : brands){
-                out.println("<br>Try: <strong>" + brand + "</strong>");
-            } 
-        %>
+        <div class="panel">
+            <h2 class="panel__title">Recomendations</h2>
+    
+            <!-- This is a JSP Scriptlet -->
+            <%
+                List<String> brands = (List) request.getAttribute("brands");
+                for(String brand : brands){
+                    out.println("<br>Try: <strong>" + brand + "</strong>");
+                } 
+            %>
+            <p class="panel__nav">
+                <a class="button" role="button" href="#">Go back</a>
+            </p>
+        </div>
     </section>
     <jsp:include page="footer.jsp" />
 </body>

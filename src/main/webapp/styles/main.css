@@ -36,6 +36,25 @@ body {
   min-height: 80vh;
 }
 
+.panel{
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid;
+  margin: 20px;
+  background-color: var(--primary-color);
+  box-shadow: 10px 12px 2px 1px rgba(0, 54, 48, .2);
+}
+
+.panel .panel__title{
+  padding: 15px 0;
+}
+
+.panel .panel__nav{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
 form{
   padding: 15px;
   border-radius: 10px;
