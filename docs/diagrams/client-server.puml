@@ -4,16 +4,19 @@
 
 title Client - Server - Architecture Overview
 
-LAYOUT_WITH_LEGEND()
+' LAYOUT_WITH_LEGEND()
 
 Person(user, "User")
 Container(browser, "Browser", "Client")
-System_Boundary(site, "Servlet container"){
-    Container(webapp, "Drink Advisor App", "Java", "Web app")
+System_Boundary(site, "Servlet container", "HTTP server"){
+    System(webapp, "Drink Advisor App", "Web App", "Servlet")
 }
+ContainerDb(database, "Database", "DB")
+
 Rel(user, browser, "Action")
 Rel(browser, webapp, "Request")
-Rel(webapp, browser, "Resource")
+Rel(webapp, browser, "Response")
+BiRel(webapp, database, "Data")
 
-footer drawn with PlantUML v. %version() and C4-PlantUML v. C4Version()
+footer David Ramirez - drawn with PlantUML v. %version() and C4-PlantUML v. C4Version()
 @enduml
